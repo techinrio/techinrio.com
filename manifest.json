@@ -1,0 +1,35 @@
+{
+  "id": "/?source=pwa",
+  "scope": "/",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "name": "Tech In Rio",
+  "description": "A comunidade de tecnologia mais carioca do Brasil está online e roteando!",
+  "short_name": "Tech In Rio",
+  "theme_color": "#fa7f01",
+  "background_color": "#fafafa",
+  "icons": [
+    {
+      "src": "./images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./images/screenshot.png",
+      "sizes": "1265x762",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Home screen"
+    },
+    {
+      "src": "./images/screenshot.png",
+      "sizes": "1265x762",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Home screen"
+    }
+  ]
+}
