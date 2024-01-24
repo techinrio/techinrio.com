@@ -10,7 +10,7 @@
   "background_color": "#fafafa",
   "icons": [
     {
-      "src": "./images/logo.svg",
+      "src": "./images/logo-black.webp",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
