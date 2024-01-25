@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Galeria da Comunidade - Tech in Rio</title>
+    <meta
+      name="description"
+      content="Aqui você pode conferir as mídias postadas pela comunidade do Tech in Rio."
+    />
+
+    <!-- set site author -->
+    <meta name="author" content="Tech In Rio" />
+
+    <!-- set site charset -->
+    <meta charset="utf-8" />
+
+    <!-- set site viewport -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+
+    <!-- set site manifest -->
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- register service worker -->
+    <script>
+      window.addEventListener('load', () => {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker
+            .register('./service-worker.js')
+            .then((registration) => {
+              console.debug('Service Worker register successfull');
+              console.debug(JSON.stringify(registration, null, 2));
+            })
+            .catch((error) => {
+              console.debug('Service Worker register error');
+              console.debug(JSON.stringify(error, null, 2));
+            });
+        }
+      });
+    </script>
+
+    <!-- set site theme color -->
+    <meta name="theme-color" content="#000000" />
+
+    <!-- set site language -->
+    <meta name="language" content="pt-BR" />
+    <!-- set site keywords -->
+    <meta
+      name="keywords"
+      content="tech, rio, rio de janeiro, tecnologia, inovação, comunidade, brasil, rj"
+    />
+    <!-- set site robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- set site banner  -->
+    <meta property="og:image" content="./images/banner-favela.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- set site twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@techinrio" />
+    <meta name="twitter:creator" content="@techinrio" />
+    <meta
+      name="twitter:title"
+      content="Tech In Rio - A comunidade mais carioca de todo Brasil!"
+    />
+    <meta
+      name="twitter:description"
+      content="Você acabou de aportar na comunidade de tecnologia mais carioca de todo Brasil!"
+    />
+    <meta name="twitter:image" content="./images/banner-favela.webp" />
+
+    <!-- set site favicon -->
+    <link rel="shortcut icon" href="./images/logo-black.webp" />
+
+    <!-- set site logo -->
+    <link rel="apple-touch-icon" href="./images/logo-black.webp" />
+
+    <link
+      rel="shortcut icon"
+      href="./images/logo-black.webp"
+      type="image/webp"
+    />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+
+    <script type="text/javascript">
+      // get all photos from Data In Rio folder: ./images/data-in-rio
+      // photos names are not normalized, so we need to sort them
+
+      function handleRenderPhotos() {
+        const path = './images/data-in-rio';
+
+        const photos = [
+          'DataInRio-1.webp',
+          'DataInRio-2.webp',
+          'DataInRio-3.webp',
+          'DataInRio-4.webp',
+          'DataInRio-5.webp',
+          'DataInRio-6.webp',
+          'DataInRio-7.webp',
+          'DataInRio-8.webp',
+          'DataInRio-9.webp',
+          'DataInRio-10.webp',
+          'DataInRio-11.webp',
+          'DataInRio-12.webp',
+          'DataInRio-13.webp',
+          'DataInRio-14.webp',
+          'DataInRio-15.webp',
+          'DataInRio-16.webp',
+          'DataInRio-17.webp',
+          'DataInRio-18.webp',
+          'DataInRio-19.webp',
+          'DataInRio-20.webp',
+          'DataInRio-21.webp',
+          'DataInRio-22.webp',
+          'DataInRio-23.webp',
+          'DataInRio-24.webp',
+          'DataInRio-25.webp',
+        ];
+
+        const photosList = photos.map((photo) => {
+          return `<img src="${path}/${photo}" alt="${photo}" />`;
+        });
+
+        const photosContainer = document.getElementById(
+          'data-in-rio-photos-container'
+        );
+
+        if (photosContainer) photosContainer.innerHTML = photosList.join('');
+      }
+
+      window.addEventListener('load', handleRenderPhotos);
+    </script>
+
+    <style>
+      #data-in-rio-photos-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        gap: 16px;
+        padding: 8px;
+      }
+
+      #data-in-rio-photos-container > img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1>Galeria da Comunidade</h1>
+        <p>
+          Aqui você pode conferir as mídias postadas pela comunidade do Tech in
+          Rio.
+        </p>
+      </header>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- Content -->
+        <section id="content" class="main">
+          <span class="image main"
+            ><img src="images/banner.webp" alt=""
+          /></span>
+          <h2>
+            <a
+              href="https://guild.host/events/data-in-rio-2vqhtg"
+              target="_blank"
+            >
+              Data In Rio
+            </a>
+          </h2>
+          <p>
+            Com um foco intenso nas últimas tendências em análise de dados,
+            ciência de dados e muito mais, você terá a oportunidade de mergulhar
+            fundo no universo dos dados.
+            <br />
+          </p>
+          <div id="data-in-rio-photos-container"></div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <h2>Tech In Rio</h2>
+          <p>Tecnologia conectando pessoas e transformando vidas.</p>
+          <ul class="actions">
+            <li><a href="generic.html" class="button">Saber Mais</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Entre em contato</h2>
+          <dl class="alt">
+            <dt>Email</dt>
+            <dd>
+              <a href="mailto:contato@techinrio.com">contato@techinrio.com</a>
+            </dd>
+          </dl>
+          <ul class="icons">
+            <li>
+              <a
+                href="https://twitter.com/techinrio"
+                class="icon brands fa-twitter alt"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@techinrio"
+                class="icon brands fa-youtube alt"
+                ><span class="label">YouTube</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.twitch.tv/techinrio"
+                class="icon brands fa-twitch alt"
+                ><span class="label">Twitch</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/techinrio/"
+                class="icon brands fa-instagram alt"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/techinrio"
+                class="icon brands fa-github alt"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+        </section>
+        <p class="copyright">
+          &copy; Tech In Rio. Design:
+          <a href="https://html5up.net">HTML5 UP</a>.
+        </p>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
