@@ -250,7 +250,7 @@ html {
 }
 
 body {
-  background-image: url('../../images/favela-bg.webp');
+  background-image: url('../../images/bg/favela-bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
