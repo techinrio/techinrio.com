@@ -1,7 +1,6 @@
 // ** cache name **
 const cacheName = 'tech-in-rio-assets-v1';
 
-
 // ** utility static data **
 const offlineResponse = new Response('You are offline', {
   status: 200,
@@ -27,6 +26,22 @@ const assetsExtensions = [
   '.otf',
   '.eot',
 ];
+
+// ** install event and first cached resources **
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(cacheName).then((cache) => {
+      return cache.addAll([
+        // resources to be cached during installation
+        '/',
+        '/index.html',
+        '/manifest.json',
+        '/assets/css/main.css',
+        '/assets/js/main.js'
+      ]);
+    })
+  );
+});
 
 // ** utility basic functions **
 const cacheRequest = async (request, response) => {
