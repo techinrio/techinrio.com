@@ -1,4 +1,4 @@
-a<!DOCTYPE html>
+<!DOCTYPE html>
 <!--
 	Stellar by HTML5 UP
 	html5up.net | @ajlkn
@@ -11,18 +11,79 @@ a<!DOCTYPE html>
       name="description"
       content="Você acabou de aportar na comunidade de tecnologia mais carioca de todo Brasil!"
     />
+
+    <!-- set site author -->
+    <meta name="author" content="Tech In Rio" />
+
+    <!-- set site charset -->
     <meta charset="utf-8" />
+
+    <!-- set site viewport -->
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
 
+    <!-- set site manifest -->
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- register service worker -->
+    <script>
+      window.addEventListener('load', () => {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker
+            .register('./service-worker.js')
+            .then((registration) => {
+              console.debug('Service Worker register successfull');
+              console.debug(JSON.stringify(registration, null, 2));
+            })
+            .catch((error) => {
+              console.debug('Service Worker register error');
+              console.debug(JSON.stringify(error, null, 2));
+            });
+        }
+      });
+    </script>
+
+    <!-- set site theme color -->
+    <meta name="theme-color" content="#000000" />
+
+    <!-- set site language -->
+    <meta name="language" content="pt-BR" />
+    <!-- set site keywords -->
     <meta
       name="keywords"
       content="tech, rio, rio de janeiro, tecnologia, inovação, comunidade, brasil, rj"
     />
+    <!-- set site robots -->
+    <meta name="robots" content="index, follow" />
 
-    <link rel="manifest" href="./manifest.json" />
+    <!-- set site banner  -->
+    <meta property="og:image" content="./images/banner-favela.webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- set site twitter card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@techinrio" />
+    <meta name="twitter:creator" content="@techinrio" />
+    <meta
+      name="twitter:title"
+      content="Tech In Rio - A comunidade mais carioca de todo Brasil!"
+    />
+    <meta
+      name="twitter:description"
+      content="Você acabou de aportar na comunidade de tecnologia mais carioca de todo Brasil!"
+    />
+    <meta name="twitter:image" content="./images/banner-favela.webp" />
+
+    <!-- set site favicon -->
+    <link rel="shortcut icon" href="./images/logo-black.webp" />
+
+    <!-- set site logo -->
+    <link rel="apple-touch-icon" href="./images/logo-black.webp" />
+
     <link
       rel="shortcut icon"
       href="./images/logo-black.webp"
@@ -40,9 +101,9 @@ a<!DOCTYPE html>
     <div id="wrapper">
       <!-- Header -->
       <header id="header" class="alt">
-        <span class="logo"
-          ><img src="images/logo-h-transparent.png" alt=""
-        /></span>
+        <span class="logo">
+          <img src="images/logo-h-transparent.png" alt="" />
+        </span>
         <p>Somos a comunidade de tecnologia mais carioca de todo Brasil!</p>
       </header>
 
@@ -52,7 +113,7 @@ a<!DOCTYPE html>
           <li><a href="#intro" class="active">A Comunidade</a></li>
           <li><a href="#eventos">Eventos</a></li>
           <li><a href="#parceiros">Parceiros</a></li>
-          <li><a href="#mural">Mural</a></li>
+          <li><a href="./galeria.html">Galeria</a></li>
         </ul>
       </nav>
 
@@ -84,15 +145,6 @@ a<!DOCTYPE html>
               ><img src="./images/IMG_9345 Large.jpeg" width="300" alt=""
             /></span>
           </div>
-          <span class="image"
-            ><img src="./images/DataInRio-133.jpg" width="300" alt=""
-          /></span>
-          <span class="image"
-            ><img src="./images/DataInRio-230.jpg" width="300" alt=""
-          /></span>
-          <span class="image"
-            ><img src="./images/DataInRio-134.jpg" width="300" alt=""
-          /></span>
         </section>
 
         <!-- First Section -->
@@ -224,11 +276,24 @@ a<!DOCTYPE html>
           <header class="major">
             <h2>Faça parte você também</h2>
             <p>
-              Participar e contribuir com a comunidade é simples e gratificante.
+              A comunidade é viva e feita por pessoas.
               <br />
-              Junte-se agora mesmo e faça parte da nossa história!
+              Venha fazer parte da Tech In Rio!
             </p>
           </header>
+
+          <div class="partners-container">
+            <span class="image"
+              ><img src="./images/DataInRio-133.jpg" width="300" alt=""
+            /></span>
+            <span class="image"
+              ><img src="./images/DataInRio-230.jpg" width="300" alt=""
+            /></span>
+            <span class="image"
+              ><img src="./images/DataInRio-134.jpg" width="300" alt=""
+            /></span>
+          </div>
+
           <footer class="major">
             <ul class="actions special">
               <li>
